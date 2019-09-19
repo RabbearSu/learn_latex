@@ -1,0 +1,135 @@
+\documentclass{article}
+
+\usepackage[UTF8]{ctex}
+
+\usepackage{amsmath}
+
+\begin{document}
+    \[
+    \begin{matrix}
+        0 & 1 \\
+        1 & 0
+    \end{matrix}    
+    \begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{pmatrix}  
+    \begin{bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{bmatrix}  
+    \begin{Bmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{Bmatrix}  
+    \begin{vmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{vmatrix}  
+    \begin{Vmatrix}
+        0 & 1 \\
+        1 & 0
+    \end{Vmatrix}  
+    \]
+
+    \[
+    A = \begin{pmatrix}
+        a_{11}^2 & a_{12}^2 & a_{13}^2 \\
+        0 & a_{22} & a_{23} \\
+        0 & 0 & a_{33}
+    \end{pmatrix}  
+    \]
+
+    %常用省略号\dots, \ddots, \vdots
+    \[
+    A = \begin{bmatrix}
+        a_{11} & \cdots & a_{1n} \\
+        & \ddots & \vdots \\
+        0 & & a_{nn}
+    \end{bmatrix}_{n \times n}
+    \]
+
+    %嵌套矩阵
+    \[
+    A = \begin{pmatrix}
+        \begin{matrix} 1&0\\0&1 \end{matrix} & \text{\Large 0} \\
+        \text{\Large 0} & \begin{matrix} 1&0\\0&1 \end{matrix}
+    \end{pmatrix}  
+    \]
+
+    %三角矩阵
+    \[
+    \begin{pmatrix}
+        a_{11} & a_{12} & \cdots & a_{1n} \\
+        & a_{22} & \cdots & a_{2n} \\
+        &        & \ddots & \vdots \\
+        \multicolumn{2}{c}{\raisebox{1.3ex}[0pt]{\Huge 0 }}
+        & & a_{nn}
+    \end{pmatrix}    
+    \]
+
+    %跨列省略号
+    \[
+    \begin{pmatrix}
+        1 & \frac{1}{2} & \cdots & \frac{1}{n} \\
+        \hdotsfor{4} \\
+        m & \frac{m}{2} & \cdots & \frac{m}{n}
+    \end{pmatrix}    
+    \]
+
+    %行内小矩阵模式
+    复数$z = (x,y)$可以表示为矩阵形式：
+    \begin{math}
+        \left(
+            \begin{smallmatrix}
+                x & -y \\ y & x
+            \end{smallmatrix}
+        \right)
+    \end{math}来表示
+
+    %array环境
+    \[
+    \begin{array}{c|c}
+        \frac{1}{2} & 2 \\
+        \hline
+        2 & 2 \\
+        \hline 
+        0 & -\frac{1}{2} \\
+    \end{array}
+    \]
+    
+    % 用array构建复杂矩阵
+    \[
+    \begin{array}{c@{\hspace{-5pt}}l}
+    % 第一行第一列
+    \left(
+    \begin{array}{ccc|ccc}
+        a & \cdots & a & b & \cdots & b \\
+        & \ddots & \vdots & \vdots & \ddots \\
+        & & a & b \\
+        \hline
+        & & & c & \cdots & c \\
+        & & & \vdots & & \vdots \\
+        \multicolumn{3}{c|}{\raisebox{2ex}[0pt]{\Huge 0}} 
+        & c & \cdots & c \\
+    \end{array}
+    \right)
+    &
+    %第1行第2列
+    \begin{array}{l}
+    \left.\rule{0mm}{7mm}\right\}p\\    
+    \\
+    \left.\rule{0mm }{7mm}\right\}q
+    \end{array}
+    \\[-5pt]
+    %第二2行第1列
+    \begin{array}{cc}
+    \underbrace{\rule{17mm}{0mm}}_m &
+    \underbrace{\rule{17mm}{0mm}}_m
+    \end{array}
+    & 
+    % 第2行第2列
+    \end{array}
+    \]
+
+\end{document}

@@ -1,0 +1,35 @@
+\documentclass{ctexart}
+
+% \usepackage{ctex}
+
+\usepackage{graphicx}
+\graphicspath{{pics/}}
+
+\begin{document}{
+    \begin{figure}[htbp]
+        \centering
+        \includegraphics[scale=0.03]{m}      
+        \caption{\TeX 系统的壁纸：Mojave沙漠}\label{lion}
+    \end{figure}
+    \LaTeX 中的\TeX 系统的壁纸见图 {\ref{lion}}
+
+    \LaTeX 中的表格为\ref{tab-score}
+    \begin{table}[htbp]
+        \centering
+        \caption{\kaishu 兔熊大家族的简介}\label{tab-score}
+        \begin{tabular}{|l||c|c|c|p{1.5cm}|}
+            \hline
+            姓名 & 身高 & 语文 & 数学 & 兔熊币 \\
+            \hline \hline
+            兔熊 & 30 & 10 & 10 & 500 \\
+            \hline
+            兔熊熊 & 30 & 10 & 10 & 500 \\
+            \hline
+            小石头 & 30 & 10 & 10 & 500 \\
+            \hline
+        \end{tabular}
+        
+        表格 \ref{tab-score}
+    \end{table}
+
+\end{document}

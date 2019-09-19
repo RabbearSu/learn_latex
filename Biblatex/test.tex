@@ -1,0 +1,16 @@
+\documentclass{ctexart}
+
+\usepackage[style=caspervector, backend=biber, utf8, 
+sorting = ecnty]{biblatex}
+\addbibresource{test2.bib}
+
+\begin{document}
+    无格式化引用 \cite{__2019}
+
+    带方括号的引用 \parencite{__2019-2}
+
+    上标引用 \supercite{__2019-1}
+
+    \nocite{*}
+    \printbibliography
+\end{document}

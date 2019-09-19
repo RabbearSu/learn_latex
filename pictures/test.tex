@@ -1,0 +1,36 @@
+\documentclass{ctexart}
+
+% \usepackage[UTF8]{ctex}
+
+\usepackage{graphicx}
+
+\graphicspath{{figures/}, {pics/}}
+
+\begin{document}
+    \LaTeX 中的插图：
+
+    这是一个高为2，宽为6cm的壁纸：
+
+    \includegraphics[height=2cm, width=6cm]{figures/Mojave.jpg}
+
+    这是一个版心高度0.1倍的壁纸
+
+    \includegraphics[height=0.1\textheight, angle=45]{figures/Mojave.jpg}
+
+    这是一个版心高度0.2倍的壁纸
+
+    \includegraphics[height=0.2\textheight]{figures/Mojave.jpg}
+
+    这是一个版心宽度0.6倍的壁纸：
+
+    \includegraphics[width=0.6\textwidth]{figures/Mojave.jpg}
+
+    这是一个版心宽度1倍的壁纸：
+
+    \includegraphics[width=1.0\textwidth]{figures/Mojave.jpg}
+
+    这是一个缩放0.5倍的图片
+
+    \includegraphics[scale=0.01, angle=60]{figures/Mojave.jpg}
+
+\end{document}
