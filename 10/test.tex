@@ -22,12 +22,25 @@
 % 定义和重定义环境
 % \newenvironment
 % \renewenvironment
-\newenvironment{myabstract}[1][摘要]
-{\small
-        \begin{center} \bfseries #1 \end{center}
-        \begin{equation}}
-        {\end{quotation}}
+\newenvironment{myabstract}[1][我的摘要]
+{
+    \begin{center}\textbf #1\end{center}
+    \begin{quote} 
+}
+{\end{quote}}
 
+
+% 环境参数只有环境前定义中可以使用参数
+% 可以和newcommand嵌套使用
+\newenvironment{Quotation}[1]
+{
+    \newcommand\quotesource{#1}
+    \begin{quotation}
+}
+{\par\hfill--- 《\textit{\quotesource}》
+\end{quotation}}
+
+% 正文区
 \begin{document}
     \PRC
 
@@ -44,6 +57,12 @@
     \end{abstract}
 
     \begin{myabstract}
-        这是一段自定义格式的摘要。。。
+        这是一段自定义格式的摘要
+        \par\hfill--- 《\textit{乾坤}》
     \end{myabstract}
+
+    \begin{Quotation}{易$\cdot$乾}
+        初九，潜龙勿用。
+    \end{Quotation}
+
 \end{document}
